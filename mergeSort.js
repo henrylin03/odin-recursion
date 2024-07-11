@@ -1,17 +1,19 @@
 function mergeSort(arr) {
-  const compareNumbers = (a, b) => a - b;
-
   // base: single elem array
   if (arr.length === 1) return arr;
 
   // split in half
-  const halfIdx = Math.round(arr.length / 2);
+  const middleIdx = Math.round(arr.length / 2);
 
   // sorts
-  const left = mergeSort(arr.slice(0, halfIdx));
-  const right = mergeSort(arr.slice(halfIdx));
+  const left = mergeSort(arr.slice(0, middleIdx));
+  const right = mergeSort(arr.slice(middleIdx));
 
-  return left.concat(right).sort(compareNumbers);
+  // return left.concat(right).sort(compareNumbers);
+}
+
+function merge(left, right, compareFn) {
+  return;
 }
 
 // test cases
