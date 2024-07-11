@@ -1,6 +1,8 @@
 function mergeSort(arr) {
+  const compareNumbers = (a, b) => a - b;
+
   // base: single elem array
-  if (arr.length === 2) return arr.sort();
+  if (arr.length === 1) return arr;
 
   // split in half
   const halfIdx = Math.round(arr.length / 2);
@@ -9,7 +11,7 @@ function mergeSort(arr) {
   const left = mergeSort(arr.slice(0, halfIdx));
   const right = mergeSort(arr.slice(halfIdx));
 
-  return left.concat(right).sort();
+  return left.concat(right).sort(compareNumbers);
 }
 
 // test cases
