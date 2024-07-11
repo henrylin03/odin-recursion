@@ -22,9 +22,9 @@ const fibs = (count) => {
 const fibsRec = (count) => {
   console.log(`the count is ${count}.`);
 
-  const firstTwoFibs = [0, 1];
+  const res = [0, 1];
   // base
-  if (count <= 2) return firstTwoFibs.slice(0, count);
+  if (count < 3) return res.slice(0, count);
 
   // recursive
   // fibsRec(count - 1);
