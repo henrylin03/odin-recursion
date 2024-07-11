@@ -34,9 +34,10 @@ const fibsRec = (count) => {
   return prevSequence;
 };
 
-console.log(fibsRec(0));
-console.log(fibsRec(1));
-console.log(fibsRec(2));
-console.log(fibsRec(8));
-console.log(fibsRec(3));
-console.log(fibsRec(10));
+// tests
+// console.log(fibsRec(0));
+// console.log(fibsRec(1));
+// console.log(fibsRec(2));
+// console.log(fibsRec(8));
+// console.log(fibsRec(3));
+// console.log(fibsRec(10));
