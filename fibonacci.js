@@ -22,13 +22,13 @@ const fibs = (count) => {
 const fibsRec = (count) => {
   console.log(`the count is ${count}.`);
 
-  // base cases
-  if (count === 0) return [];
-  if (count === 1) return [0];
-  if (count === 2) return [0, 1]
+  const firstTwoFibs = [0, 1];
+  // base
+  if (count <= 2) return firstTwoFibs.slice(0, count);
 
   // recursive
-  return fibsRec(count - 1).push(num);
+  // fibsRec(count - 1);
+  // return fibsRec(count - 1).push(num);
 };
 
 console.log(fibsRec(0));
