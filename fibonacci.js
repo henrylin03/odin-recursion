@@ -18,9 +18,22 @@ const fibs = (count) => {
   return res;
 };
 
-console.log(fibs(0));
-console.log(fibs(1));
-console.log(fibs(2));
-console.log(fibs(8));
-console.log(fibs(3));
-console.log(fibs(10));
+// using recursion
+const fibsRec = (count) => {
+  console.log(`the count is ${count}.`);
+
+  // base cases
+  if (count === 0) return [];
+  if (count === 1) return [0];
+  if (count === 2) return [0, 1]
+
+  // recursive
+  return fibsRec(count - 1).push(num);
+};
+
+console.log(fibsRec(0));
+console.log(fibsRec(1));
+console.log(fibsRec(2));
+console.log(fibsRec(8));
+console.log(fibsRec(3));
+console.log(fibsRec(10));
