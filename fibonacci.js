@@ -19,19 +19,19 @@ const fibs = (count) => {
 };
 
 // using recursion
-const fibsRec = (count, resArray = [0, 1]) => {
+const fibsRec = (count) => {
   // base
   if (count <= 0) return [];
   if (count === 1) return [0];
   if (count === 2) return [0, 1];
 
   // recursive
-  let lastTwoNums = resArray.slice(-2);
-  let sumOfLastTwoNums = lastTwoNums.reduce(
-    (currentValue, accumulator) => currentValue + accumulator
-  );
-  resArray.push(sumOfLastTwoNums);
-  return fibsRec(count - 1, resArray);
+  let prevSequence = fibsRec(count - 1);
+  let sumOfLastTwoElems =
+    prevSequence[prevSequence.length - 1] +
+    prevSequence[prevSequence.length - 2];
+  prevSequence.push(sumOfLastTwoElems);
+  return prevSequence;
 };
 
 console.log(fibsRec(0));
